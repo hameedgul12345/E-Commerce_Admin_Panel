@@ -32,9 +32,9 @@ function Layout() {
           {/* Left Side: Menu Icon & Brand */}
           <div className="flex items-center gap-3">
             {menu ? (
-              <i className="ri-menu-2-line" onClick={setUIHalf}></i>
+              <i className="ri-menu-2-line font-semibold" onClick={setUIHalf}></i>
             ) : (
-              <i className="ri-menu-line" onClick={setUIFull}></i>
+              <i className="ri-menu-line font-semibold" onClick={setUIFull}></i>
             )}
             <h1 className="text-xl font-bold">E-com</h1>
           </div>
