@@ -1,10 +1,19 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Changed from "Links" to "Link"
 
 function Layout({ children }) {
   const [widthSection, setWidthSection] = useState("85%");
   const [widthAside, setWidthAside] = useState("15%");
   const [menu, setMenu] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
+
+  const links = [
+    {
+      title: "Order",
+      link: "/order",
+      icon: <i className="ri-order-play-fill"></i>,
+    },
+  ];
 
   const setUIFull = () => {
     setWidthSection("100%");
@@ -25,7 +34,15 @@ function Layout({ children }) {
         className="fixed top-0 left-0 bg-blue-600 h-screen text-white transition-all duration-500"
         style={{ width: widthAside, overflow: "hidden" }}
       >
-        <div className="p-4">Sidebar Content</div>
+        <div className="p-4">
+          {links.map((link, index) => (
+            <div key={index}> {/* Added key here */}
+              <Link to={link.link}> {/* Changed Links to Link */}
+                <h1>{link.title}</h1>
+              </Link>
+            </div>
+          ))}
+        </div>
       </aside>
 
       {/* Main Content */}
@@ -45,7 +62,10 @@ function Layout({ children }) {
           </div>
 
           {/* Profile Picture */}
-          <div onClick={() => setShowProfile(!showProfile)} className="w-10 h-10 rounded-full overflow-hidden border cursor-pointer">
+          <div
+            onClick={() => setShowProfile(!showProfile)}
+            className="w-10 h-10 rounded-full overflow-hidden border cursor-pointer"
+          >
             <img src="/images/profile.jpg" alt="Profile" className="w-full h-full object-cover" />
           </div>
         </nav>

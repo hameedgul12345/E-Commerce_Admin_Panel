@@ -8,6 +8,7 @@ import Layout from "./Components/Layout";
 import NotFound from "./Components/NotFound";
 import Products from "./Components/Products";
 import Welcome from "./Components/Welcome";
+import Order from "./Components/Order";
 function App() {
   return (
     <>
@@ -16,6 +17,8 @@ function App() {
         <Route path="/" element={<Welcome/>}/>
         <Route path="/">
           <Route path="products" element={<Products/>}/>
+          <Route path="order" element={<Order/>}/>
+          
         </Route>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
