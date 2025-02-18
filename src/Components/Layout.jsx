@@ -1,13 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Changed from "Links" to "Link"
+import { Link, useLocation } from "react-router-dom"; // Changed from "Links" to "Link"
 
 function Layout({ children }) {
   const [widthSection, setWidthSection] = useState("85%");
   const [widthAside, setWidthAside] = useState("15%");
   const [menu, setMenu] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
-
+  const location = useLocation();
   const links = [
+    {
+      title: "Products",
+      link: "/products",
+      icon: <i className="ri-shopping-cart-fill"></i>
+    },
     {
       title: "Order",
       link: "/order",
@@ -31,18 +36,35 @@ function Layout({ children }) {
     <div className="w-full h-screen">
       {/* Sidebar */}
       <aside
-        className="fixed top-0 left-0 bg-blue-600 h-screen text-white transition-all duration-500"
+        className="fixed top-0 left-0 h-screen text-white transition-all duration-500"
         style={{ width: widthAside, overflow: "hidden" }}
       >
-        <div className="p-4">
-          <img src="/images/logo2.png" alt="" />
-          {links.map((link, index) => (
-            <div key={index}> {/* Added key here */}
-              <Link to={link.link}> {/* Changed Links to Link */}
+        <div className="">
+          <div className="p-4">
+            {" "}
+            <img src="/images/logo2.png" alt="Logo" />
+          </div>
+
+          {/* Wrap links inside a flex container */}
+          <div className="flex flex-col gap-4  w-full">
+            {" "}
+            {/* Ensures full width */}
+            {links.map((link, index) => (
+              <Link
+                key={index}
+                className="p-4  w-full flex items-center gap-2" // ✅ Full width & no border-radius
+                to={link.link}
+                style={{
+                  backgroundColor:
+                    location.pathname === link.link ? "crimson" : "white",
+                    color:location.pathname === link.link ? "white" : "black",
+                }}
+              >
+                {link.icon}
                 <h1>{link.title}</h1>
               </Link>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </aside>
 
@@ -55,9 +77,15 @@ function Layout({ children }) {
         <nav className="bg-white shadow-md p-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             {menu ? (
-              <i className="ri-menu-2-line cursor-pointer" onClick={setUIHalf}></i>
+              <i
+                className="ri-menu-2-line cursor-pointer"
+                onClick={setUIHalf}
+              ></i>
             ) : (
-              <i className="ri-menu-line cursor-pointer" onClick={setUIFull}></i>
+              <i
+                className="ri-menu-line cursor-pointer"
+                onClick={setUIFull}
+              ></i>
             )}
             <h1 className="text-xl font-bold">E-com</h1>
           </div>
@@ -67,7 +95,11 @@ function Layout({ children }) {
             onClick={() => setShowProfile(!showProfile)}
             className="w-10 h-10 rounded-full overflow-hidden border cursor-pointer"
           >
-            <img src="/images/profile.jpg" alt="Profile" className="w-full h-full object-cover" />
+            <img
+              src="/images/profile.jpg"
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
           </div>
         </nav>
 
@@ -78,9 +110,15 @@ function Layout({ children }) {
           }`}
         >
           <div className="flex flex-col items-center gap-2">
-            <img src="/images/profile.jpg" alt="Profile" className="w-10 h-10 rounded-full border" />
+            <img
+              src="/images/profile.jpg"
+              alt="Profile"
+              className="w-10 h-10 rounded-full border"
+            />
             <h1 className="text-lg font-semibold">Hameed Gul</h1>
-            <p className="text-sm font-medium text-gray-600">MERN Stack Engineer</p>
+            <p className="text-sm font-medium text-gray-600">
+              MERN Stack Engineer
+            </p>
             <hr className="w-full border-gray-300" />
             <i className="ri-logout-circle-line text-lg cursor-pointer"></i>
           </div>
