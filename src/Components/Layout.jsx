@@ -35,6 +35,7 @@ function Layout({ children }) {
         style={{ width: widthAside, overflow: "hidden" }}
       >
         <div className="p-4">
+          <img src="/images/logo2.png" alt="" />
           {links.map((link, index) => (
             <div key={index}> {/* Added key here */}
               <Link to={link.link}> {/* Changed Links to Link */}
@@ -86,7 +87,7 @@ function Layout({ children }) {
         </div>
 
         {/* Render Children */}
-        <div className="p-6">{children}</div>
+        <div className="p-2">{children}</div>
       </section>
     </div>
   );

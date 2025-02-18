@@ -18,7 +18,6 @@ function App() {
         <Route path="/">
           <Route path="products" element={<Products/>}/>
           <Route path="order" element={<Order/>}/>
-          
         </Route>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
