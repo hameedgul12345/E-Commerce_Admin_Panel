@@ -13,6 +13,7 @@ import Payments from "./Components/Payments";
 import Customers from "./Components/Customers";
 import Dashboard from "./Components/Dashboard";
 import Settings from "./Components/Settings";
+import Auth from "./Components/Auth.jsx";
 function App() {
   return (
     <>
@@ -28,6 +29,7 @@ function App() {
           <Route path="customers" element={<Customers/>}/>
           <Route path="dashboard" element={<Dashboard/>}/>
           <Route path="settings" element={<Settings/>}/>
+          <Route path="auth" element={<Auth/>}/>
           
 
           
