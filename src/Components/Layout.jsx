@@ -91,6 +91,8 @@ function Layout({ children }) {
               </Link>
             ))}
           </div>
+          <button style={{background:'crimson'}} className="mt-4 w-full flex flex-row gap-2 p-2"><i className="ri-logout-box-line"></i><h1>Logout</h1></button>
+       
         </aside>
 
         {/* Main Content */}
@@ -189,6 +191,8 @@ function Layout({ children }) {
             </Link>
           ))}
         </div>
+        <button style={{background:'crimson'}} className="mt-4 p-4 w-full flex flex-row gap-2 p-2"><i className="ri-logout-box-line"></i><h1>Logout</h1></button>
+       
       </aside>
 
       {/* Overlay Background when Sidebar is Open */}
