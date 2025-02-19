@@ -1,6 +1,10 @@
 
 import React from 'react'
 import Layout from '../Layout'
+<<<<<<< HEAD
+=======
+
+>>>>>>> layout
 
 function Products() {
   const products = [
@@ -114,7 +118,10 @@ function Products() {
     </div>
     </Layout>
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> layout
 }
 
 export default Products;
