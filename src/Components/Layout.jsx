@@ -11,6 +11,12 @@ function Layout({ children }) {
 
   const links = [
     {
+      title: "Dashboard",
+      link: "/dashboard",
+      icon: <i className="ri-dashboard-fill"></i>
+    },
+    
+    {
 
       title: "Products",
       link: "/products",
@@ -21,27 +27,14 @@ function Layout({ children }) {
       link: "/order",
       icon: <i className="ri-order-play-fill"></i>,
     },
-{
-      title: "Dashboard",
-      link: "/dashboard",
-      icon: <i className="ri-dashboard-fill"></i>
-    },
-    
+  
     {
       title: "Customers",
       link: "/customers",
       icon: <i className="ri-customer-service-fill"></i>
     },
-    {
-      title: "Products",
-      link: "/products",
-      icon: <i className="ri-shopping-cart-fill"></i>
-    },
-    {
-      title: "Order",
-      link: "/order",
-      icon: <i className="ri-shape-line"></i>
-    },
+    
+    
     {
       title: "Payments",
       link: "/payments",
@@ -86,8 +79,8 @@ function Layout({ children }) {
               className="p-4 w-full flex items-center gap-2"
               to={link.link}
               style={{
-                backgroundColor: location.pathname === link.link ? "crimson" : "white",
-                color: location.pathname === link.link ? "white" : "black",
+                backgroundColor: location.pathname === link.link && "crimson" ,
+                color:   "white",
               }}
             >
               {link.icon}

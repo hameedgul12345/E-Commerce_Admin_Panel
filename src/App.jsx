@@ -6,7 +6,7 @@ import "remixicon/fonts/remixicon.css";
 import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout";
 import NotFound from "./Components/NotFound";
-import Products from "./Components/Products";
+import Products from "./Components/Products/index.jsx";
 import Welcome from "./Components/Welcome";
 import Order from "./Components/Order";
 import Payments from "./Components/Payments";
