@@ -4,22 +4,48 @@ import { Link, useLocation } from "react-router-dom";
 function Layout({ children }) {
   const [widthSection, setWidthSection] = useState("85%");
   const [widthAside, setWidthAside] = useState("15%");
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
   const [showProfile, setShowProfile] = useState(false);
   const location = useLocation();
   const [mobileSize, setMobileSize] = useState(0);
 
   const links = [
     {
-      title: "Order",
-      link: "/order",
-      icon: <i className="ri-order-play-fill"></i>,
+
+      title: "Dashboard",
+      link: "/dashboard",
+      icon: <i className="ri-dashboard-fill"></i>
     },
     {
       title: "Products",
       link: "/products",
-      icon: <i className="ri-order-play-fill"></i>,
+      icon:<i className="ri-shopping-cart-fill"></i>
     },
+    {
+
+      title: "Order",
+      link: "/order",
+      icon: <i className="ri-shape-2-line"></i>
+    },
+    {
+
+      title: "Customers",
+      link: "/customers",
+      icon: <i className="ri-customer-service-fill"></i>
+    },
+    {
+
+      title: "Payments",
+      link: "/payments",
+      icon: <i className="ri-money-dollar-box-fill"></i>
+    },
+    {
+
+      title: "Settings",
+      link: "/settings",
+      icon: <i className="ri-settings-5-fill"></i>
+    },
+
   ];
 
   const setUIFull = () => {
@@ -48,11 +74,11 @@ function Layout({ children }) {
           <div className="p-4">
             <img src="/images/logo2.png" alt="Logo" />
           </div>
-          <div className="flex flex-col gap-4 w-full">
+          <div className="flex flex-col gap-3 w-full">
             {links.map((link, index) => (
               <Link
                 key={index}
-                className="p-4 w-full flex items-center gap-2"
+                className="p-2 w-full flex items-center gap-2"
                 to={link.link}
                 style={{
                   backgroundColor:
@@ -77,12 +103,13 @@ function Layout({ children }) {
             <div className="flex items-center gap-3">
               {menu ? (
                 <i
-                  className="ri-menu-2-line cursor-pointer"
+                  className="ri-menu-line cursor-pointer"
                   onClick={setUIFull}
                 ></i>
               ) : (
                 <i
-                  className="ri-menu-line cursor-pointer"
+                 className="ri-menu-2-line cursor-pointer"
+                 
                   onClick={setUIHalf}
                 ></i>
               )}
