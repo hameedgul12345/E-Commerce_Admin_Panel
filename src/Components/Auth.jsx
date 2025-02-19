@@ -1,6 +1,7 @@
+
 import React, { useState } from "react";
 
-const AuthPage = () => {
+const Auth = () => {
   const [secret, setSecret] = useState("");
 
   const handleSubmit = (e) => {
@@ -43,4 +44,6 @@ const AuthPage = () => {
   );
 };
 
-export default AuthPage;
+export default Auth;
+
+

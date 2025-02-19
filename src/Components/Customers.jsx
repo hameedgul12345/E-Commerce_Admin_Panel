@@ -42,12 +42,13 @@ function Customers() {
 
   return (
     <Layout>
+        <h1>Customers</h1>
       <div className="container mx-auto mt-4">
         <div className="overflow-x-auto">
           <table className="w-full border-collapse shadow-lg">
             {/* Table Header */}
             <thead>
-              <tr className="bg-red-600 text-white text-left">
+              <tr style={{background:'crimson'}} className="text-white text-left">
                 <th className="p-2">Customer's Name</th>
                 <th className="p-2">Email</th>
                 <th className="p-2">Mobile</th>

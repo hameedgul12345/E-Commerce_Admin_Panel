@@ -13,14 +13,18 @@ import Payments from "./Components/Payments";
 import Customers from "./Components/Customers";
 import Dashboard from "./Components/Dashboard";
 import Settings from "./Components/Settings";
-import Auth from "./Components/Auth.jsx";
+
+import Auth from "./Components/Auth";
+
 function App() {
   return (
     <>
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Welcome/>}/>
+
         <Route path="/">
+          <Route path="auth" element={<Auth/>}/>
           <Route path="products" element={<Products/>}/>
           <Route path="order" element={<Order/>}/>
 
@@ -28,11 +32,11 @@ function App() {
           <Route path="payments" element={<Payments/>}/>
           <Route path="customers" element={<Customers/>}/>
           <Route path="dashboard" element={<Dashboard/>}/>
+
           <Route path="settings" element={<Settings/>}/>
           <Route path="auth" element={<Auth/>}/>
-          
+          <Route path="settings" element={<Settings/>}/> 
 
-          
         </Route>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
