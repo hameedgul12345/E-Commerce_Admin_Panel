@@ -9,6 +9,10 @@ import NotFound from "./Components/NotFound";
 import Products from "./Components/Products";
 import Welcome from "./Components/Welcome";
 import Order from "./Components/Order";
+import Payments from "./Components/Payments";
+import Customers from "./Components/Customers";
+import Dashboard from "./Components/Dashboard";
+import Settings from "./Components/Settings";
 function App() {
   return (
     <>
@@ -18,7 +22,14 @@ function App() {
         <Route path="/">
           <Route path="products" element={<Products/>}/>
           <Route path="order" element={<Order/>}/>
+
           <Route path="products" element={<Order/>}/>
+          <Route path="payments" element={<Payments/>}/>
+          <Route path="customers" element={<Customers/>}/>
+          <Route path="dashboard" element={<Dashboard/>}/>
+          <Route path="settings" element={<Settings/>}/>
+          
+
           
         </Route>
         <Route path="*" element={<NotFound/>}/>
