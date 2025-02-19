@@ -72,11 +72,11 @@ function Layout({ children }) {
         <div className="p-4">
           <img src="/images/logo2.png" alt="Logo" />
         </div>
-        <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col gap-2 w-full">
           {links.map((link, index) => (
             <Link
               key={index}
-              className="p-4 w-full flex items-center gap-2"
+              className="p-3 w-full flex items-center gap-2"
               to={link.link}
               style={{
                 backgroundColor: location.pathname === link.link && "crimson" ,
@@ -88,6 +88,8 @@ function Layout({ children }) {
             </Link>
           ))}
         </div>
+        <button className=" w-full flex flex-row gap-2 p-3 mt-4 "style={{background:'crimson'}}> <i className="ri-logout-circle-line"></i>
+          <h1>Logout</h1></button>
       </aside>
 
       {/* Main Content */}
