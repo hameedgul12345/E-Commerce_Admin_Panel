@@ -1,10 +1,7 @@
-<<<<<<< HEAD
+
 import React from 'react'
 import Layout from '../Layout'
-=======
-import React from "react";
-import Layout from "../Layout";
->>>>>>> products
+
 
 function Products() {
   const products = [
@@ -83,12 +80,8 @@ function Products() {
   ];
 
   return (
-<<<<<<< HEAD
-  <Layout>
-    <h1>Products</h1>
-  </Layout>
-  )
-=======
+
+
     <Layout>
       <h1>Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4">
@@ -122,7 +115,6 @@ function Products() {
     </div>
     </Layout>
   );
->>>>>>> products
 }
 
 export default Products;
