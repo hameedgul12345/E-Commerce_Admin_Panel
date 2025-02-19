@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 function Layout({ children }) {
   const [widthSection, setWidthSection] = useState("85%");
   const [widthAside, setWidthAside] = useState("15%");
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
   const [showProfile, setShowProfile] = useState(false);
   const location = useLocation();
   const [mobileSize, setMobileSize] = useState(0);
@@ -18,7 +18,7 @@ function Layout({ children }) {
     {
       title: "Products",
       link: "/products",
-      icon: <i className="ri-order-play-fill"></i>,
+      icon: <i className="ri-shopping-cart-fill"></i>
     },
   ];
 
@@ -77,12 +77,13 @@ function Layout({ children }) {
             <div className="flex items-center gap-3">
               {menu ? (
                 <i
-                  className="ri-menu-2-line cursor-pointer"
+                  className="ri-menu-line cursor-pointer"
                   onClick={setUIFull}
                 ></i>
               ) : (
                 <i
-                  className="ri-menu-line cursor-pointer"
+                  
+                  className="ri-menu-2-line cursor-pointer"
                   onClick={setUIHalf}
                 ></i>
               )}
