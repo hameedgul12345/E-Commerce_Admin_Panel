@@ -11,14 +11,35 @@ function Layout({ children }) {
 
   const links = [
     {
-      title: "Order",
-      link: "/order",
-      icon: <i className="ri-order-play-fill"></i>,
+      title: "Dashboard",
+      link: "/dashboard",
+      icon: <i className="ri-dashboard-fill"></i>
+    },
+    
+    {
+      title: "Customers",
+      link: "/customers",
+      icon: <i className="ri-customer-service-fill"></i>
     },
     {
       title: "Products",
       link: "/products",
       icon: <i className="ri-shopping-cart-fill"></i>
+    },
+    {
+      title: "Order",
+      link: "/order",
+      icon: <i className="ri-shape-line"></i>
+    },
+    {
+      title: "Payments",
+      link: "/payments",
+      icon: <i className="ri-money-dollar-box-fill"></i>
+    },
+    {
+      title: "Settings",
+      link: "/settings",
+      icon: <i className="ri-settings-5-fill"></i>
     },
   ];
 
