@@ -17,6 +17,9 @@ import Settings from "./Components/Settings";
 import Auth from "./Components/Auth";
 import Home from "./Components/Website/Home.jsx";
 
+import WebProducts from "./Components/Website/WebProducts.jsx";
+
+
 function App() {
   return (
     <>
@@ -24,6 +27,7 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<Welcome/>}/> */}
         <Route path="/" element={<Home/>}/>
+        <Route path="/webproducts" element={<WebProducts/>}/>
 
         <Route path="/admin">
           <Route path="auth" element={<Auth/>}/>

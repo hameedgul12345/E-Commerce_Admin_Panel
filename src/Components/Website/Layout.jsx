@@ -8,7 +8,7 @@ function Layout({ children }) {
     },
     {
         label: "Products",
-        href: '/products'
+        href: '/webproducts'
     },
     {
         label: "Category",
