@@ -15,13 +15,15 @@ import Dashboard from "./Components/Dashboard";
 import Settings from "./Components/Settings";
 
 import Auth from "./Components/Auth";
+import Home from "./Components/Website/Home.jsx";
 
 function App() {
   return (
     <>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Welcome/>}/>
+        {/* <Route path="/" element={<Welcome/>}/> */}
+        <Route path="/" element={<Home/>}/>
 
         <Route path="/">
           <Route path="auth" element={<Auth/>}/>
