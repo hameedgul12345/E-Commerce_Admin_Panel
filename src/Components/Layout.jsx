@@ -13,36 +13,36 @@ function Layout({ children }) {
     {
 
       title: "Dashboard",
-      link: "/dashboard",
+      link: "/admin/dashboard",
       icon: <i className="ri-dashboard-fill"></i>
     },
     {
       title: "Products",
-      link: "/products",
+      link: "/admin/products",
       icon:<i className="ri-shopping-cart-fill"></i>
     },
     {
 
       title: "Order",
-      link: "/order",
+      link: "/admin/order",
       icon: <i className="ri-shape-2-line"></i>
     },
     {
 
       title: "Customers",
-      link: "/customers",
+      link: "/admin/customers",
       icon: <i className="ri-customer-service-fill"></i>
     },
     {
 
       title: "Payments",
-      link: "/payments",
+      link: "/admin/payments",
       icon: <i className="ri-money-dollar-box-fill"></i>
     },
     {
 
       title: "Settings",
-      link: "/settings",
+      link: "/admin/settings",
       icon: <i className="ri-settings-5-fill"></i>
     },
 

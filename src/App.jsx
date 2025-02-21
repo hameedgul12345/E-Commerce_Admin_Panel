@@ -35,7 +35,7 @@ function App() {
 
 
         <Route path="/admin">
-          <Route path="auth" element={<Auth/>}/>
+          
           <Route path="products" element={<Products/>}/>
           <Route path="order" element={<Order/>}/>
 
