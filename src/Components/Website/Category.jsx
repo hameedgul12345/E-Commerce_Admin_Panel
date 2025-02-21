@@ -16,7 +16,7 @@ function Category() {
       
   return (
     <Layout>
-     
+     <h1 className="font-semibold p-6 text-4xl text-center">All Categories</h1>
      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6">
       {categories.map((category, index) => (
         <div
