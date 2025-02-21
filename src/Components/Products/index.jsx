@@ -11,7 +11,7 @@ function Products() {
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/a (2).jpg",
+      image: "/images/products/a.webp",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ function Products() {
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/b (2).jpg",
+      image: "/images/products/b.webp",
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ function Products() {
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/c (2).jpg",
+      image: "/images/products/c.webp",
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ function Products() {
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/j.jpg",
+      image: "/images/products/d.webp",
     },
     {
       id: 1,
@@ -47,7 +47,7 @@ function Products() {
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/h.jpg",
+      image: "/images/products/e.webp",
     },
     {
       id: 2,
@@ -56,7 +56,7 @@ function Products() {
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/g.jpg",
+      image: "/images/products/f.webp",
     },
     {
       id: 3,
@@ -65,7 +65,7 @@ function Products() {
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/f.jpg",
+      image: "/images/products/g.webp",
     },
     {
       id: 4,
@@ -74,7 +74,7 @@ function Products() {
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/e.jpg",
+      image: "/images/products/h.webp",
     },
   ];
 
