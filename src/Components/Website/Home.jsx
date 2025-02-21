@@ -15,75 +15,77 @@ function Home() {
     {
       id: 1,
       name: "Men's Shirt Slim Blue",
+      description: "This is the best shirt available in the online market",
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/a (2).jpg",
+      image: "/images/products/a.webp",
     },
     {
       id: 2,
       name: "Men's Shirt Slim Blue",
-  
+      description: "This is the best shirt available in the online market",
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/b (2).jpg",
+      image: "/images/products/b.webp",
     },
     {
       id: 3,
       name: "Men's Shirt Slim Blue",
-      
+      description: "This is the best shirt available in the online market",
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/c (2).jpg",
+      image: "/images/products/c.webp",
     },
     {
       id: 4,
       name: "Men's Shirt Slim Blue",
-      
+      description: "This is the best shirt available in the online market",
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/j.jpg",
+      image: "/images/products/d.webp",
     },
     {
       id: 1,
       name: "Men's Shirt Slim Blue",
-      
+      description: "This is the best shirt available in the online market",
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/h.jpg",
+      image: "/images/products/e.webp",
     },
     {
       id: 2,
       name: "Men's Shirt Slim Blue",
-    
+      description: "This is the best shirt available in the online market",
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/g.jpg",
+      image: "/images/products/f.webp",
     },
     {
       id: 3,
       name: "Men's Shirt Slim Blue",
-     
+      description: "This is the best shirt available in the online market",
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/f.jpg",
+      image: "/images/products/g.webp",
     },
     {
       id: 4,
       name: "Men's Shirt Slim Blue",
-      
+      description: "This is the best shirt available in the online market",
       price: 3600,
       originalPrice: 4500,
       discount: "20% Off",
-      image: "/images/products/e.jpg",
+      image: "/images/products/h.webp",
     },
   ];
+
   return (
     <Layout>
       <Swiper
@@ -134,7 +136,7 @@ function Home() {
       </p>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4">
-      {products.map((product,index) => (
+    {products.map((product,index) => (
         <div
           key={index}
           className="bg-white shadow-lg rounded-lg overflow-hidden"
@@ -146,7 +148,7 @@ function Home() {
           />
           <div className="p-4">
             <h2 className="text-lg font-semibold">{product.name}</h2>
-            
+            <p className="text-gray-500 text-sm">{product.description}</p>
             <div className="mt-2 flex items-center">
               <span className="text-blue-600 font-bold text-lg">
                 ₹{product.price}
@@ -157,9 +159,7 @@ function Home() {
               <span className="ml-2 text-green-600 text-sm">
                 {product.discount}
               </span>
-            
             </div>
-            <button className="bg-green-600 rounded-sm w-[100%] mt-2.5 font-semibold p-2 text-white">Buy Now</button>
           </div>
         </div>
       ))}
