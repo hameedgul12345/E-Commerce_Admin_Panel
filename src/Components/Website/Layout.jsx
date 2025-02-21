@@ -16,6 +16,7 @@ function Layout({ children }) {
     { label: "Products", href: "/webproducts" },
     { label: "Category", href: "/category" },
     { label: "Contact us", href: "/contact-us" },
+    
   ];
 
   return (
