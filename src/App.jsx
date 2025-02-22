@@ -21,6 +21,7 @@ import WebProducts from "./Components/Website/WebProducts.jsx";
 
 import Signin from "./Components/Website/signin.jsx";
 import Signup from "./Components/Website/Signup.jsx";
+import Contactus from "./Components/Website/Contactus.jsx";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/signin" element={<Signin/>}/>
         <Route path="/category" element={<Category/>}/>
         <Route path="/signup" element={<Signup/>}/>
+        <Route path="/contactus" element={<Contactus/>}/>
 
 
         <Route path="/admin">

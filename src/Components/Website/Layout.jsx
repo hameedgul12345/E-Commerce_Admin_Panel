@@ -15,7 +15,7 @@ function Layout({ children }) {
     { label: "Home", href: "/" },
     { label: "Products", href: "/webproducts" },
     { label: "Category", href: "/category" },
-    { label: "Contact us", href: "/contact-us" },
+    { label: "Contact us", href: "/contactus" },
     
   ];
 
