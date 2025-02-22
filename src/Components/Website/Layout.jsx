@@ -40,9 +40,9 @@ function Layout({ children }) {
               ))}
               <Link
                 className="block py-3 text-center hover:bg-blue-600 w-[100px] hover:text-white"
-                to="/login"
+                to="/signin"
               >
-                Login
+              Signin
               </Link>
               <Link
                 className="bg-blue-600 py-3 px-10 text-md font-semibold text-white block text-center hover:bg-rose-600"

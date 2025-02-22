@@ -17,8 +17,8 @@ import Settings from "./Components/Settings";
 import Auth from "./Components/Auth";
 import Home from "./Components/Website/Home.jsx";
 import Category from "./Components/Website/Category.jsx";
-
 import WebProducts from "./Components/Website/WebProducts.jsx";
+import Signin from "./Components/Website/signin.jsx";
 
 
 function App() {
@@ -30,9 +30,9 @@ function App() {
         <Route path="/" element={<Home/>}/>
 
         <Route path="/webproducts" element={<WebProducts/>}/>
-
+          <Route path="/signin" element={<Signin/>}/>
         <Route path="/category" element={<Category/>}/>
-
+       
 
         <Route path="/admin">
           
