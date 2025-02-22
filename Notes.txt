@@ -1,0 +1,360 @@
+                                       Google
+              ___________________________|______________________
+             |                           |                      |
+        (Senior SD)                   (Jonior SD)           (Fresher)
+
+
+                                        Google
+                __________________________|__________________________
+            (Front-End)                                             (Back-End)
+            (Angular JS)                                                (Go Language)
+
+
+
+                                       Google
+                __________________________|__________________________
+            (Front-End)                                             (Back-End)
+            (React JS)                                                (Node)
+
+
+            Pre-Requsites
+            I)html,CSS,
+            II)JS
+               |=>Array
+                =>Objects
+                =>Loops
+                =>Conditions
+
+      FrameWork                                           Library
+      *)Work in Boundries or rules                        *)100% customizable
+      *)Support your logic                                *)Code manipolation possible
+                                                          *)The archtecture of code or the contorl of your code is in your hand
+                                                          *)javascript ka file hota jo har kam ke laey alag banya jata hen
+                                                          he usko internet pr dall dia jata hen jisko hm hm apney project me use 
+                                                          kkartey hen
+        
+                                                               
+
+      React is note seo Friendly so after react you should learn Next.JS
+
+      React Job Road Map
+      *)html
+      *)css
+      *)JS
+      *)ReactJS
+      *)NextJS
+      *)NodeJS
+      *)ExpressJS
+      *)MongoDB
+      *)Git
+      *)AwsCloud
+      *)Jira
+      How to create React App 
+      1)npx create-react-app coding_Ott
+      2)npx create vite@latest coding_Ott
+
+Project structure
+package.json:
+Coniguration ffiile hota hen jis k ander hmarye
+project me use honeywaly libraries ka declaratioin hota henn version k sath
+Library its defffinition has in package.json
+
+Node Module :
+source code libraries is in node Module
+
+letter Convention(Case):
+-----------------------
+Lower Case (hameed gul)
+Upper Case (Hameed Gul)
+Camel Case (hameedGul)
+Lower Case (HameedGul)
+
+JSX javascript XML (Extensible Markup Language)
+There is no predefine rules for XML
+java scriipt ka isa code jo js awer Markup ka anomati deta hen
+
+JSX Expression{}:
+{}in between Markup
+javascript koi bhe code jsko hm {} k ander laeky Markup ka ander
+
+
+Component:
+Component is a external javascript fiile specially created in react js
+To diviide userInterface in react we use Componennts
+1.Markkup
+2.Pure JS 
+
+Note: jis me padding,margin ,width,height kam na kare iska matlab wo block level element nahe hen
+so we will do "display:'block'"
+
+User Defined Componnnent(.JSX) 
+1)it's not in built 
+2)
+Built-in Componnnent(.js)
+
+Export & Import:
+
+
+How to run react app on mobile
+cmd=>ipconfic
+ IPv4 Address:portofyourapp
+  192.168.98.239:3000
+
+
+  Note :
+  We can not use Objects in jsx Expression
+
+  <Nav></Nav>                         <Nav/>
+  html                                 xthml
+  
+
+  Routing :
+
+  URL k according jb hm user Inter face ka decision letey henn tu usko Routing kehtey hen
+
+Link vs anchor(a)
+
+Link tag:
+jb menu ko hm Link tag me close kartey hen tu requset server ko nahe jata browser me jo userInterface load howa hen waha se 
+load hota hen
+
+anchor(a) tag :
+jb menu ko hm a tag me close kartey hen tu requset server ko jata server me jo userInterface hen waha se 
+load hota hen
+
+SPA (Single Page Application)::
+Jb hm request kartey hen server se website k link ka  tu request server ko nahe jatha browser me load hochoka hen wahe
+se doabara load hojata hen
+
+SPA is not seo friendly 
+
+
+React -> NextJS
+Vue  -> NuxtJS
+Angular ->universal
+
+
+How to use icon in your react app
+=>remixicon.com
+=>copy package
+=>Install in your app
+=>copy icon and use it
+
+
+how to use Gradient:
+cssgradient.io
+
+animation:
+animate.style
+
+MAP METHOD:
+
+Online Code Editor For React:
+Stackbitz
+
+Array Destrucring:
+jb app Array me se data copy kartey hen Array k syntax ko follow kartye honey
+
+const student=['ali','peshawar',12]
+const name=student[0]
+const address=student[1]
+const age = student[3]
+
+const student[name,address,age]=['ali','peshawar',12]
+clg(name)
+
+Object Destrucring:
+
+const student={
+  name:'ali',
+  age:'23',
+  address:'peshawar'
+}
+const {name,age,address}={
+  name:'ali',
+  age:'23',
+  address:'peshawar'
+}
+
+Array Destrucring:      ||     Object Destrucring:
+1)const can anything          1)const will same as object proerty
+2)order will same               2)order doess not matter  
+
+const name='ali'
+const {name:fullName,age,address}={
+  name:'ali',
+  age:'23',
+  address:'peshawar'
+}
+
+Condtional Rendering:
+------------------------------------------------------------------->
+1)Ternary Operator:
+(codition ? 'Statemennt':'Statemennt')
+2)Logical AND(&&) Operator:
+Work On True (WOR ON ONLY ONE Conditions)
+(Conditions) && 'Statemennt'
+3)Logical OR(||) Operator:
+(Conditions) || 'Statemennt'
+-------------------------------------------------------------------->
+
+fuuntions:
+CaseStudy 01:Why we write just "onClick={test}" instead of "onClick={test()}"
+Because whenever we don't send any arguments to test function
+const test=()=>{
+  console.log('hello')
+}
+<Button onClick={test}></Button>
+CaseStudy 02:Why we don't write "onClick={test()}"
+Because whenever we render our react app  the test fun will automatically called so
+write this "onClick={()=>{test()}}" in arrow function definition
+
+Hooks:
+Predefine Functions
+useState():
+=>It's store data locally
+=>
+------------------------------------------------------------------------------------------->
+useEffect()
+useRef()
+
+
+why react run twice ?
+Because of Strick Mood
+
+Spread Operator:
+Joint two or more arrays || Joint two or more Objects
+--------------------------------------------------------->
+Arrays:
+--------------------------------------------------------->
+const student1=['ali','khan']
+const student2=['aki','ahmad']
+const allStudents=[student1,student2] "X"
+---------------------------------------------------------->
+Using Spread Operator(...):
+const student1=['ali','khan']
+const student2=['aki','ahmad']              "  /"
+const allStudents=[...student1,...student2] "\/"
+------------------------------------------------------------------->
+Objects:
+------------------------------------------------------------------>
+const marks1={
+  maths:30,
+  english:90
+}
+const marks2={
+  physics:50,
+  science:40
+}
+const allMarks={
+  marks1,
+  marks2
+}
+---------------------------------------------------------------->
+Using Spread Operator(...):
+const marks1={
+  maths:30,
+  english:90
+}
+const marks2={
+  physics:50,
+  science:40
+}
+const allMarks={
+  ...marks1,
+  ...marks2
+}
+--------------------------------------------------------------->
+Library For Alert:
+
+Sweet Alert
+1)npm install sweetalert2
+--------------------------------------------------------------->
+Note :
+kabhi bhie ager object k ander proerty variable ho usko hm [] 
+k ander lock kartey nahe tu wo us property ko dhondey ga
+
+const [form,setForm]=useState({
+    FullName:'',
+    email:'',
+    age:'',
+    subject:'',
+    marks:'',
+    dob:''
+  })
+
+  
+const handleInput=(e)=>{
+  const input=e.target;
+  const value=input.value;
+  const key=input.name
+  setForm({
+    ....form,
+    [key]:value
+  })
+}
+
+UseRef Hook:
+Provide you Native functonality of javascript
+
+
+Rest API :
+jo hr kam k ley alag alag ho awer jo apko server deta ho
+
+HTTp request:
+HTTp request code karney ka tarika hen take hm seerver se kuch 
+mangwasakey ya server pe kuch bachsako js ya react ki madad se ya server se kuch delete karsake
+ya server pe update karsake react ya js ki madad se ya se related koi bhe kam ho tu uske lay 
+apko frontend ko backend se connect karna hogga awer connect karney k ley jis method ka use kia jata hen usko 
+HTTp request kaha jata henn ajax request
+
+
+Two Methods For HTTP Request:
+I)fetch Method
+If the internal code is proisable internally then the success and fail result will be then and catch block
+1).then().catch()
+fetch('')
+.then((response)=>response.json())
+.then((data)=>console.log(data))
+.catch((err)=>console.log(err))
+
+Note:if we use {} braces then we must use return keyword
+2)try{} catch
+const test=async ()=>{
+
+try{
+  const response=await fetch('')
+  const data=response.json
+}
+catch(err){
+  console.log(err)
+}
+
+}
+Note:how set image wiidth in fflex
+width:"calc(width of image - gap in flex)"
+II)Axios Method
+
+Exceptional Handling:
+then catch
+try catch
+
+
+
+useEffect():
+React which executed whenever somme event happend or It contorl side effect of event
+
+useEffect(()=>,[])
+where [] is dependency array which has state constant it will execute useEffect
+whennever the state variable will change
+
+Clean Up function
+
+
+
+
+FireBase:
+=>Service
+  ->Datababse(store data like username ,password)
+  ->Storage(Audio,Video,Images)
+  ->Authentication
