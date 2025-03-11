@@ -20,6 +20,9 @@ import Category from "./Components/Website/Category.jsx";
 import WebProducts from "./Components/Website/WebProducts.jsx";
 
 import Signup from "./Components/Website/Signup.jsx";
+
+import Signin from "./Components/Website/Signin.jsx";
+
 import Contactus from "./Components/Website/Contactus.jsx";
 import PreCheck from "./Components/Checks/PreCheck.jsx";
 import Cart from "./Components/Website/Cart.jsx";
