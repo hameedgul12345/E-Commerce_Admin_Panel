@@ -1,7 +1,49 @@
 import React, { useState } from "react";
+import { Link,useNavigate } from "react-router-dom";
+import firebaseAppCinfig from "../../util/firebase-config";
+import { getAuth,signInWithEmailAndPassword } from "firebase/auth";
+import Swal from 'sweetalert2';
+const auth = getAuth(firebaseAppCinfig);
 
-const Signup = () => {
+const Signin = () => {
   const [passwordType, setPasswordType] = useState("password");
+  const navigate=useNavigate()
+  const [formData, setFormData] = useState({
+      email: "",
+      password: "",
+    });
+const signin=async(e)=>{
+  try{
+    e.preventDefault()
+    const user=await signInWithEmailAndPassword(auth,formData.email,formData.password)
+   // Success Alert
+         Swal.fire({
+           icon: "success",
+           title: "Signup Successful!",
+           text: "Your account has been created successfully.",
+           confirmButtonColor: "#3085d6",
+         });
+   navigate('/')
+    console.log(user)
+  }catch(err){ Swal.fire({
+          icon: "error",
+          title: "Signup Failed!",
+          text: err.message,
+          confirmButtonColor: "#d33",
+        });
+  }
+}
+const handleChange=(e)=>{
+  const input=e.target
+  const name=input.name
+  const value=input.value
+  
+  setFormData({
+    ...formData,
+    [name]:value
+  })
+  
+}
   return (
     <div className="w-full h-screen">
       <div className="flex  w-full bg-white p-4  gap-4  h-screen overflow-hidden w-3/4 ">
@@ -11,7 +53,7 @@ const Signup = () => {
             Enter profile detail to login
           </p>
 
-          <form>
+          <form onSubmit={signin}>
           
 
             <div className="mb-4">
@@ -20,6 +62,8 @@ const Signup = () => {
               </label>
               <input
                 type="email"
+                name="email"
+                onChange={handleChange}
                 required
                 placeholder="example@mail.com"
                 className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -33,6 +77,8 @@ const Signup = () => {
               <input
                 type={passwordType}
                 placeholder="********"
+                onChange={handleChange}
+                name="password"
                 className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
@@ -57,6 +103,9 @@ const Signup = () => {
               Signin
             </button>
           </form>
+          <div>
+            Don't have an account ? <Link to='/signup' className='text-blue-600 text-lg font-semibold'>Signup</Link>
+          </div>
         </div>
         <div className="w-1/2  p-4 rounded-xl border border-gray-300  flex items-center justify-center">
           <img
@@ -70,4 +119,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Signin;

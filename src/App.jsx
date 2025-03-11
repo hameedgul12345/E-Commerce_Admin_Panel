@@ -22,40 +22,45 @@ import WebProducts from "./Components/Website/WebProducts.jsx";
 import Signin from "./Components/Website/signin.jsx";
 import Signup from "./Components/Website/Signup.jsx";
 import Contactus from "./Components/Website/Contactus.jsx";
-
+import PreCheck from "./Components/Checks/PreCheck.jsx";
+import Cart from "./Components/Website/Cart.jsx";
+import Profile from "./Components/Website/Profile.jsx";
+import AdminChecks from "./Components/Checks/AdminChecks.jsx";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-      <Routes>
-        {/* <Route path="/" element={<Welcome/>}/> */}
-        <Route path="/" element={<Home/>}/>
+        <Routes>
+          {/* <Route path="/" element={<Welcome/>}/> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/webproducts" element={<WebProducts />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/contactus" element={<Contactus />} />
+          <Route path="/cart" element={<Cart/>}/>
+          <Route path="/profile" element={<Profile/>}/>
 
-        <Route path="/webproducts" element={<WebProducts/>}/>
-          <Route path="/signin" element={<Signin/>}/>
-        <Route path="/category" element={<Category/>}/>
-        <Route path="/signup" element={<Signup/>}/>
-        <Route path="/contactus" element={<Contactus/>}/>
-
-
-        <Route path="/admin">
-          
-          <Route path="products" element={<Products/>}/>
-          <Route path="order" element={<Order/>}/>
-
-          <Route path="products" element={<Order/>}/>
-          <Route path="payments" element={<Payments/>}/>
-          <Route path="customers" element={<Customers/>}/>
-          <Route path="dashboard" element={<Dashboard/>}/>
-
-          <Route path="settings" element={<Settings/>}/>
-          <Route path="auth" element={<Auth/>}/>
-          <Route path="settings" element={<Settings/>}/> 
-
-        </Route>
-        <Route path="*" element={<NotFound/>}/>
-      </Routes>
+          <Route element={<PreCheck />}>
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+          </Route>
+          {/* <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} /> */}
+          <Route element={<AdminChecks/>}>
+          <Route path="/admin">
+            <Route path="products" element={<Products />} />
+            <Route path="order" element={<Order />} />
+            <Route path="products" element={<Order />} />
+            <Route path="payments" element={<Payments />} />
+            <Route path="customers" element={<Customers />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="auth" element={<Auth />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </>
   );
